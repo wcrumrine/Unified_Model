@@ -5,3 +5,7 @@
 __pycache__/
 .DS_Store
 *.log
+
+# Exception — halo data (small, needed by everyone who runs the pipeline)
+!Data/*.pkl
+!Data/*.csv
