@@ -37,9 +37,12 @@ print("Cell Initiated")
 
 import sys
 import os
-# utils lives at CARC_Cluster/utils — go up two levels from Analyses/All_scatter_Cuts_vs_Raw/
+# utils and wdm both live under CARC_Cluster/ — add both to sys.path.
+# Script path: CARC_Cluster/Analyses/All_scatter_Cuts_vs_Raw/ — go up two to reach CARC_Cluster/.
 _THIS_DIR = os.path.dirname(os.path.abspath(__file__))
-sys.path.insert(0, os.path.abspath(os.path.join(_THIS_DIR, '..', '..', 'utils')))
+_CARC_ROOT = os.path.abspath(os.path.join(_THIS_DIR, '..', '..'))
+sys.path.insert(0, os.path.join(_CARC_ROOT, 'utils'))
+sys.path.insert(0, os.path.join(_CARC_ROOT, 'wdm'))
 
 import numpy as np
 import pandas as pd
